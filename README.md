@@ -7,4 +7,4 @@ module "private_vm" {
   resource_group_name = # tbd
   subnet_id           = # tbd
 }
-```hcl
+```
