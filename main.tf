@@ -22,7 +22,6 @@ resource "azurerm_linux_virtual_machine" "vm" {
   location                        = var.location
   size                            = "Standard_B1s"
   admin_username                  = "adminuser"
-  admin_password                  = "Pa$$W0rdasdasdsad"
   disable_password_authentication = false
 
   network_interface_ids = [
