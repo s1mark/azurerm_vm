@@ -2,9 +2,6 @@ variable "resource_group_name" { }
 variable "location"            { }
 variable "vm_name"             { }
 variable "subnet_id"           { }
-variable "vm_size" {
-  default = "Standard_B1s"
-}
 
 
 resource "azurerm_network_interface" "nic" {
@@ -23,7 +20,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   name                            = var.vm_name
   resource_group_name             = var.resource_group_name
   location                        = var.location
-  size                            = var.vm_size
+  size                            = "Standard_B1s"
   admin_username                  = "adminuser"
   disable_password_authentication = true
 
